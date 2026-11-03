@@ -73,6 +73,31 @@ of words.
 
 These are views of Letrane 0.1.1, rendered in a clean preview using the app's
 actual interface. No personal documents or desktop content are shown.
+Version 0.2.0 adds monochrome tab icons, boxed Help and About sections, a
+side-by-side About logo/name/version, and T1-T3 reader buttons; the screenshots
+below show the earlier layout.
+
+## Reading templates in 0.2.0
+
+Save three combinations of reading options and color theme under **Settings >
+Reading templates**. **Save T1**, **Save T2** and **Save T3** replace the
+corresponding slot; Apply restores it. The **T1 T2 T3** buttons immediately
+left of **Menu** on the reading frame apply those same slots without opening
+the menu.
+
+- **T1:** Yellow selected, tail fading only, 2 characters, about 83% strength,
+  three-line mouse guide with gradient.
+- **T2:** Yellow highlights only, 2 characters, about 50% strength, one-line
+  mouse guide without gradient.
+- **T3:** Green highlights plus tail fading, 4 characters, about 71% strength,
+  five-line mouse guide with gradient.
+
+All three starter templates use smoothing at 3%, Middle placement and System
+theme. Existing saved slots and current reading options are preserved. Templates
+never change assistance on/off, window position, Help preview, usage sharing or
+update-check preferences. Saved template contents stay on your device.
+
+### Initial reading options
 
 The new defaults are **Smooth changes: 3%**, **Lead emphasis: 2** and
 **Tail fade strength: 75%**. **Highlight color** starts off, with **Yellow**
@@ -146,7 +171,9 @@ and launch it directly.
 Open Help in the app for the quick-start guide. Drag the purple reading frame over
 text, resize it, and use Menu to customize the appearance.
 
-When upgrading from 0.1.0, choose Exit in the old copy before launching 0.1.1.
+When upgrading, choose Exit in the old copy before launching the new version.
+Otherwise, launching the new EXE reopens the already-running older copy.
+For upgrades from 0.1.0, exiting first is especially important:
 The older version does not support single-instance activation.
 
 ## Updates
