@@ -71,10 +71,8 @@ of words.
 
 ## Screenshots
 
-These are views of Letrane's latest development interface, rendered in a clean
-preview. No personal documents or desktop content are shown. The screenshots
-show the new defaults for the next release; the currently published v0.1.0
-download may look different.
+These are views of Letrane 0.1.1, rendered in a clean preview using the app's
+actual interface. No personal documents or desktop content are shown.
 
 The new defaults are **Smooth changes: 3%**, **Lead emphasis: 2** and
 **Tail fade strength: 75%**. **Highlight color** starts off, with **Yellow**
@@ -142,9 +140,14 @@ and launch it directly.
 - The EXE is signed and timestamped. SmartScreen may still show a reputation warning.
 - The optional `Letrane.App.exe.sha256` asset verifies the downloaded file.
 - Local preferences and statistics are saved under `%LOCALAPPDATA%\Letrane`.
+- Launching Letrane again opens the running app's menu and reading frame instead
+  of starting another instance. Your current tab and reading choices are kept.
 
 Open Help in the app for the quick-start guide. Drag the purple reading frame over
 text, resize it, and use Menu to customize the appearance.
+
+When upgrading from 0.1.0, choose Exit in the old copy before launching 0.1.1.
+The older version does not support single-instance activation.
 
 ## Updates
 
@@ -169,7 +172,7 @@ Europe. No screen content, recognized text, hardware identifiers or account name
 are included. The identifier links reports from the same installation; reports
 are pseudonymous, not fully anonymous.
 
-The next release also includes current reading-setting choices in these reports,
+Version 0.1.1 also includes current reading-setting choices in these reports,
 so the developer can see which options people prefer. These are exit-time
 preferences, not a record of what you read or how long you used each setting.
 Sharing the settings follows the same Statistics opt-out.
