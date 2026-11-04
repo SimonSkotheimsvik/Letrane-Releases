@@ -14,6 +14,20 @@ It is not a medical treatment and does not guarantee improved reading.
 
 **[Download the latest signed Windows EXE](https://github.com/SimonSkotheimsvik/Letrane-Releases/releases/latest)**
 
+## New in 0.3.0: native and lightweight
+
+Letrane has been rebuilt in native C++ using Windows APIs, replacing the bundled
+.NET/WPF application. The signed portable EXE is under 1 MB rather than roughly
+167 MB, with no .NET runtime, browser engine or installer required.
+Existing local preferences, three reading templates, statistics and reporting
+identity are preserved.
+
+The new interface has compact themed cards, smooth scrolling, equal-length
+sliders that ignore accidental wheel adjustments, named color swatches, and
+clearer reading-window buttons with hover feedback and descriptive tooltips.
+Mouse-following guides use continuous damped motion and stay steady through
+small webpage hover changes.
+
 ## A calmer place for the eyes to land
 
 Letrane began with a simple observation: my daughter, Ane, found text easier to
@@ -71,13 +85,39 @@ of words.
 
 ## Screenshots
 
-These are views of Letrane 0.1.1, rendered in a clean preview using the app's
-actual interface. No personal documents or desktop content are shown.
-Version 0.2.0 adds monochrome tab icons, boxed Help and About sections, a
-side-by-side About logo/name/version, and T1-T3 reader buttons; the screenshots
-below show the earlier layout.
+These are new captures of the actual native 0.3.0 interface, using synthetic
+demonstration text and example statistics only. No personal documents or desktop
+content are shown. All screenshots of the earlier WPF app have been replaced.
 
-## Reading templates in 0.2.0
+### Reading window
+
+The transparent frame includes T1-T3 templates, Menu, Pause/Play, Maximize/Restore
+and Close. A mouse-following line guide can surround the clear active line.
+
+![Native reading frame over synthetic text](assets/screenshots/reading.png)
+
+### Help and reading-style preview
+
+The Reading style switch shares the Help heading and previews word appearance
+directly on the instructions.
+
+![Help in light appearance](assets/screenshots/help-light.png)
+![Help in dark appearance](assets/screenshots/help-dark.png)
+
+### Settings
+
+The color dropdown sits beside Highlight color and shows a swatch plus its name.
+Mouse-wheel scrolling never accidentally changes sliders or selectors.
+
+![Word appearance and named color selector](assets/screenshots/settings-light.png)
+![Follow mouse and inline color-theme controls](assets/screenshots/follow-dark.png)
+
+### Statistics and About
+
+![Local statistics and reporting preferences](assets/screenshots/statistics-dark.png)
+![About Letrane 0.3.0](assets/screenshots/about-dark.png)
+
+## Reading templates
 
 Save three combinations of reading options and color theme under **Settings >
 Reading templates**. **Save T1**, **Save T2** and **Save T3** replace the
@@ -105,44 +145,6 @@ selected; **Fade word tails** starts on. **Follow mouse** starts on with
 **3 lines**, **Middle** placement and **gradient fill**. **Color theme** is
 **System** (shown here on a dark Windows desktop).
 
-### Follow your reading line
-
-The yellow follow-mouse frame keeps the active middle line clear, with a soft
-gradient above and below it. Word tails are gently faded while the first two
-characters stay unchanged.
-
-This clean demonstration uses sample text recognized by Windows OCR and
-Letrane's actual reading-frame and overlay rendering. The pointer position is
-fixed for the image; no private desktop content is captured.
-
-![Letrane reading frame over sample text, with faded word tails and a yellow three-line follow-mouse gradient around the clear middle line](assets/screenshots/follow-mouse.png)
-
-### Start with three simple steps
-
-The Help tab explains how to position the frame, read at your own pace and make
-the appearance comfortable.
-
-![Letrane Help tab with the quick-start guide in dark appearance](assets/screenshots/help.png)
-
-### Try the reading style
-
-The **Reading style** checkbox applies Letrane's emphasis directly to the Help
-text. This shows the built-in preview—not a screenshot of OCR over another app.
-
-The preview uses the new default tail fading; the mouse-following frame is
-demonstrated separately above, not inside the Help text.
-
-![Letrane Help text with the first two characters unchanged and word tails gently faded](assets/screenshots/reading-style.png)
-
-### Make it your own
-
-Reading assistance, word appearance and mouse-following controls are grouped
-into compact cards, with explanations available from the small information icons.
-
-![Letrane Settings tab showing smoothing, word emphasis and mouse-following options](assets/screenshots/settings.png)
-
-![Letrane Follow mouse controls with tracking enabled, three lines, Middle placement and gradient enabled, followed by System color theme](assets/screenshots/follow-mouse-settings.png)
-
 ## The visual identity
 
 <img src="assets/branding/letrane-256.png" alt="Letrane purple rounded-square app icon with a white weighted L" width="96">
@@ -161,7 +163,8 @@ Download `Letrane.App.exe` from the [latest release](https://github.com/SimonSko
 and launch it directly.
 
 - Windows 11 x64 with an installed Windows OCR language is required.
-- No installer, administrator access or separate .NET runtime is required.
+- Native C++, under 1 MB: no installer, administrator access, .NET runtime or
+  runtime bundle extraction is required.
 - The EXE is signed and timestamped. SmartScreen may still show a reputation warning.
 - The optional `Letrane.App.exe.sha256` asset verifies the downloaded file.
 - Local preferences and statistics are saved under `%LOCALAPPDATA%\Letrane`.
@@ -199,10 +202,19 @@ Europe. No screen content, recognized text, hardware identifiers or account name
 are included. The identifier links reports from the same installation; reports
 are pseudonymous, not fully anonymous.
 
-Version 0.1.1 also includes current reading-setting choices in these reports,
+Reports also include current reading-setting choices,
 so the developer can see which options people prefer. These are exit-time
 preferences, not a record of what you read or how long you used each setting.
 Sharing the settings follows the same Statistics opt-out.
+
+The 0.3.0 rewrite keeps this reporting contract and the existing opt-out;
+it does not upload screen content.
+
+## Historical releases
+
+Older release pages and Git tags remain for reference. Their oversized EXE and
+checksum downloads have been removed now that the smaller native 0.3.0 build is
+available. Use the latest release for downloads.
 
 Received reports are retained for 12 years (4,383 days). Opting out stops future
 reports but does not erase existing reports early. Network services process
