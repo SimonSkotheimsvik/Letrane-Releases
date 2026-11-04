@@ -14,7 +14,20 @@ It is not a medical treatment and does not guarantee improved reading.
 
 **[Download the latest signed Windows EXE](https://github.com/SimonSkotheimsvik/Letrane-Releases/releases/latest)**
 
-## New in 0.3.0: native and lightweight
+## New in 0.3.1: more room to focus
+
+- Choose **1, 3, 5, 7 or 9 lines in frame**, and any odd **Lines in focus**
+  count up to that size. The focus stays centered and clear, with soft gradient
+  bands above and below it. Only the outer frame has an outline.
+- Templates preserve frame and focus counts. Shrinking the frame clamps focus
+  to the largest valid choice. The old Top/Middle selector and gradient checkbox
+  have been replaced by Lines in focus; older settings migrate to one focus line.
+- Settings sliders redraw cleanly during dragging and keyboard adjustments.
+- Template save/apply messages appear only in the normal footer.
+- Optional reporting supports the new choices, with richer Azure workbook
+  charts for usage, adoption, preferences, reporting activity and service signals.
+
+## Native and lightweight since 0.3.0
 
 Letrane has been rebuilt in native C++ using Windows APIs, replacing the bundled
 .NET/WPF application. The signed portable EXE is under 1 MB rather than roughly
@@ -74,8 +87,8 @@ of words.
   over the text you want to follow.
 - **Make the emphasis comfortable:** choose colors, emphasize the first 1–5
   characters, and adjust highlight strength or word-tail fading.
-- **Guide your place:** optionally follow the mouse with a thin reading-line
-  frame and one, three or five line-sized slots.
+- **Guide your place:** follow the mouse with a 1/3/5/7/9-line outer frame and
+  a clear centered focus area; gradients mark the lines outside the focus.
 - **Keep changes smooth:** tune how the markings respond to small webpage changes.
 - **Match your desktop:** use System, Light or Dark appearance.
 - **Start simply:** the Help tab opens first, with three quick steps and a
@@ -85,7 +98,7 @@ of words.
 
 ## Screenshots
 
-These are new captures of the actual native 0.3.0 interface, using synthetic
+These are new captures of the actual native 0.3.1 interface, using synthetic
 demonstration text and example statistics only. No personal documents or desktop
 content are shown. All screenshots of the earlier WPF app have been replaced.
 
@@ -115,7 +128,7 @@ Mouse-wheel scrolling never accidentally changes sliders or selectors.
 ### Statistics and About
 
 ![Local statistics and reporting preferences](assets/screenshots/statistics-dark.png)
-![About Letrane 0.3.0](assets/screenshots/about-dark.png)
+![About Letrane 0.3.1](assets/screenshots/about-dark.png)
 
 ## Reading templates
 
@@ -132,8 +145,10 @@ the menu.
 - **T3:** Green highlights plus tail fading, 4 characters, about 71% strength,
   five-line mouse guide with gradient.
 
-All three starter templates use smoothing at 3%, Middle placement and System
-theme. Existing saved slots and current reading options are preserved. Templates
+All three starter templates use smoothing at 3%, centered one-line focus and
+System theme. Existing slots and reading preferences are preserved except the
+retired Top/Middle and gradient settings, which migrate to centered one-line
+focus with gradient outside it. Templates
 never change assistance on/off, window position, Help preview, usage sharing or
 update-check preferences. Saved template contents stay on your device.
 
@@ -142,7 +157,9 @@ update-check preferences. Saved template contents stay on your device.
 The new defaults are **Smooth changes: 3%**, **Lead emphasis: 2** and
 **Tail fade strength: 75%**. **Highlight color** starts off, with **Yellow**
 selected; **Fade word tails** starts on. **Follow mouse** starts on with
-**3 lines**, **Middle** placement and **gradient fill**. **Color theme** is
+**3 lines in frame**, **1 line in focus**, and gradient fill outside the clear
+focus area. Matching frame and focus counts show only the outer outline.
+**Color theme** is
 **System** (shown here on a dark Windows desktop).
 
 ## The visual identity
