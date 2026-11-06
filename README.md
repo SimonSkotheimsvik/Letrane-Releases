@@ -14,7 +14,15 @@ It is not a medical treatment and does not guarantee improved reading.
 
 **[Download the latest signed Windows EXE](https://github.com/SimonSkotheimsvik/Letrane-Releases/releases/latest)**
 
-## New in 0.3.1: more room to focus
+## New in 0.3.2: move your setup between computers
+
+- **Export settings...** and **Import settings...** sit below Reading templates in
+  Settings. Export saves your current reading options and templates T1-T3 to a
+  readable JSON file; Import loads such a file on another computer after you
+  confirm. Assistance on/off, window position and privacy/update choices are not
+  included, and an invalid or newer-format file changes nothing.
+
+## Earlier in 0.3.1: more room to focus
 
 - Choose **1, 3, 5, 7 or 9 lines in frame**, and any odd **Lines in focus**
   count up to that size. The focus stays centered and clear, with soft gradient
@@ -98,7 +106,7 @@ of words.
 
 ## Screenshots
 
-These are new captures of the actual native 0.3.1 interface, using synthetic
+These are new captures of the actual native 0.3.2 interface, using synthetic
 demonstration text and example statistics only. No personal documents or desktop
 content are shown. All screenshots of the earlier WPF app have been replaced.
 
@@ -124,11 +132,12 @@ Mouse-wheel scrolling never accidentally changes sliders or selectors.
 
 ![Word appearance and named color selector](assets/screenshots/settings-light.png)
 ![Follow mouse and inline color-theme controls](assets/screenshots/follow-dark.png)
+![Reading templates with export and import](assets/screenshots/export-dark.png)
 
 ### Statistics and About
 
 ![Local statistics and reporting preferences](assets/screenshots/statistics-dark.png)
-![About Letrane 0.3.1](assets/screenshots/about-dark.png)
+![About Letrane 0.3.2](assets/screenshots/about-dark.png)
 
 ## Reading templates
 
